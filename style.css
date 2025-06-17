@@ -1,1 +1,132 @@
+/* Reset básico para remover margens e preenchimentos padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Estilos do Cabeçalho Principal */
+.main-header {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+/* Estilos do Banner */
+.banner {
+    position: relative; /* Para posicionar o texto sobre a imagem */
+    width: 100%;
+    overflow: hidden; /* Garante que a imagem não vaze */
+}
+
+.banner-img {
+    width: 100%;
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Remove espaço extra abaixo da imagem */
+    object-fit: cover; /* Garante que a imagem cubra todo o espaço, cortando se necessário */
+    max-height: 300px; /* Altura máxima para o banner */
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centraliza o texto */
+    color: #fff;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente para o texto */
+    padding: 20px 30px;
+    border-radius: 8px;
+    max-width: 80%; /* Limita a largura do texto */
+}
+
+.banner-text h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* Sombra para o texto do título */
+}
+
+.banner-text p {
+    font-size: 1.2em;
+}
+
+/* Estilos da Navegação */
+.main-nav {
+    background-color: #4CAF50; /* Um verde mais vibrante para a navegação */
+    padding: 10px 0;
+    text-align: center;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex; /* Para alinhar os itens horizontalmente */
+    justify-content: center; /* Centraliza os itens da navegação */
+}
+
+.main-nav ul li {
+    margin: 0 15px;
+}
+
+.main-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
+    border-radius: 4px;
+}
+
+.main-nav ul li a:hover {
+    background-color: #5cb85c; /* Um verde um pouco mais claro no hover */
+}
+
+/* Estilos para o rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    margin-top: 30px;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    .banner-text h1 {
+        font-size: 1.8em;
+    }
+
+    .banner-text p {
+        font-size: 1em;
+    }
+
+    .main-nav ul {
+        flex-direction: column; /* Empilha os itens da navegação em telas menores */
+        padding: 10px 0;
+    }
+
+    .main-nav ul li {
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-text h1 {
+        font-size: 1.5em;
+    }
+
+    .banner-text p {
+        font-size: 0.9em;
+    }
+
+    .banner-text {
+        padding: 10px 15px;
+    }
+}
 
